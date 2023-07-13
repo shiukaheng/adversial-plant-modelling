@@ -21,5 +21,11 @@ class PredictiveNetwork(nn.Module):
         x = self.linear(x)
         return x
     
+    def forward_once(self, x):
+        x = x.unsqueeze(0).unsqueeze(0) # Add batch and sequence dimensions
+        output, self.hidden_state = self.rnn(x, self.hidden_state)
+        output = self.linear(output[:, -1, :]) # Get the last output in the sequence
+        return output.squeeze(0) # Remove batch dimension
+    
     def reset(self):
         self.hidden_state = None

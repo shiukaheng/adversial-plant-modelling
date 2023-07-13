@@ -12,7 +12,8 @@
 			"extensions": [
 				"ms-python.python",
 				"GitHub.copilot",
-				"njpwerner.autodocstring"
+				"njpwerner.autodocstring",
+				"ms-toolsai.jupyter"
 			]
 		}
 	}

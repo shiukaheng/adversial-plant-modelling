@@ -1,6 +1,6 @@
 from plant.base_plant_interface import BasePlantInterface
 
-class MotorSimulator(BasePlantInterface):
+class SimulatedVoltageMotor(BasePlantInterface):
     def __init__(self, R, L, Kt, Ke, J, B):
         self.R = R
         self.L = L
